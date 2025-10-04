@@ -93,4 +93,68 @@ cross‑region recovery.
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ac1cc42c-2cc9-4272-a73c-820b6bfe25d1" />
 
 
-   
+Task 5-
+📝Modify an EBS volume in place (size and/or type), expand the filesystem online, and 
+confirm capacity and performance changes without downtime. 
+
+
+1. Modify the EBS volume size and type
+2. expand the file system
+3. Confirm capacity and performance changes without down time
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/5bb96419-2c54-47b6-9050-2f97e0196943" />
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/2bb4ecc1-5195-4592-a53f-26228294f00b" />
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/3c8fd07d-ee73-4495-a398-7c0a1bfcdc8e" />
+
+
+Task 6-
+📝Create an AMI backup of a running instance, terminate the original, and relaunch a 
+replacement from the AMI to confirm a clean, predictable rebuild. 
+
+1. Terminated the original instance
+2. Launch the new instance from the AMI
+3. Verify the new instance Launched Clearly
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/435c9ef6-3d75-4d82-b0b6-9211d4dda48d" />
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/82a515c3-7f4f-4795-aefe-959b5ecc19cd" />
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/cc44bdfc-b2b3-420c-98e1-36732de665a3" />
+
+
+Task 7-
+📝Create a snapshot of a data volume, restore a new volume from that snapshot, attach it 
+to an instance, and validate that all expected files are present. 
+
+1. Ceated the snapshoot of data volume
+2. Restore new volume from that snapshoot and attach it
+3. Check the chnages didi in first volume should preset (files) in preset instance
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/0cf78ad4-b754-4284-8814-2513a9d27ca0" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/bd262fa6-b358-45ed-8cd8-d63fda7b5717" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ebe142c3-28e2-4d23-ae56-433f7a7216b2" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/518547c6-5cf3-459a-94b8-04de59b5e70e" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/35f69079-840c-42ed-9675-e84503b6ff4b" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a1c1db02-44a5-44aa-83ce-64cf47e9a615" />
+
+<img width="1635" height="899" alt="Image" src="https://github.com/user-attachments/assets/107c8664-0699-42d7-b245-9447e4132219" />
+
+
+Task 8-
+📝Demonstrate three restore paths from snapshots: (a) create and attach a data volume 
+from a snapshot, (b) register/launch an instance from a root‑volume snapshot via AMI.
+
+📌Task 8 is perform in two differnt task , task (a) is perform in task 6 and (b) is perform in task 1.
