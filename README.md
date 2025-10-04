@@ -70,4 +70,27 @@ volume to the new instance.
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a510c505-6bd0-47da-b988-2e0ccbb90e3a" />
 
+
+Task 4-
+📝Restore an EBS snapshot to a new volume in a different Availability Zone, validate data 
+integrity there, then copy the same snapshot to another Region, restore it, and verify 
+cross‑region recovery.
+
+
+1. Restore the EBS Snapshoot tp Volume in different AZ
+2. Volume is attached to different Instance
+3. Validate the data intergrity in  that zone
+4. Copy the same snapshoot  to other region and restore it
+5. Verify it
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/9c84ff4f-c683-4b9d-b89e-ae77ef09ffb4" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/2898a1b5-8720-41ec-8084-9752f54d95d6" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e1a4322d-d145-49dc-97ff-9aac170a108c" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ac1cc42c-2cc9-4272-a73c-820b6bfe25d1" />
+
+
    
