@@ -1,2 +1,13 @@
-# AWS-Traning
-AWS daily task performance
+Task 1-
+📝Launch a new EC2 instance from a public AMI; attach a fresh gp3 data volume, 
+partition/format/mount it for app data, take a point-in-time snapshot, and provide secure 
+access via both SSH and Session Manager. 
+
+1. EC2-Launch Instance [Amazon Linux 2] with t2.micro
+2. Added IAM with SSMmanager policys
+3. Launch and attach gp3 data volume
+4. Make partition and Mount the volume
+5. Created Volume from EC2 and Created the Snapshoot
+6. Access it through Key pair
+   
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/33f84aab-9dfd-4f43-a2bf-cae4bb625e87" />
