@@ -149,21 +149,21 @@ snapshot too)
 3. Created Launch Tamplated : lt-intern-web
 4. user data-
    #!/bin/bash
-   yum update -y
-   yum install -y httpd
-   systemctl enable httpd
-   systemctl start httpd
-   HOSTNAME=$(hostname)
-   PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
-   cat > /var/www/html/index.html <<EOF
-   <html>
-   <body>
-      <h1>Instance hostname: ${HOSTNAME}</h1>
-    <p>Private IP: ${PRIVATE_IP}</p>
-    </body>
-   </html>
-   EOF
-   chown -R apache:apache /var/www/html
+   ,yum update -y
+   ,yum install -y httpd
+   ,systemctl enable httpd
+   ,systemctl start httpd
+   ,HOSTNAME=$(hostname)
+   ,PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
+   ,cat > /var/www/html/index.html <<EOF
+   ,<html>
+   ,<body>
+    ,  <h1>Instance hostname: ${HOSTNAME}</h1>
+    ,<p>Private IP: ${PRIVATE_IP}</p>
+    ,</body>
+   ,</html>
+   ,EOF
+   ,chown -R apache:apache /var/www/html
 5. Created Auto Sacling Group
 6. Validate and tested the sites and insrances
 7. DNS- 
