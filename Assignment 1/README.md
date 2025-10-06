@@ -57,9 +57,10 @@
    ❖ AMI: Amazon Linux 2
    ❖ Public IP: 13.1250.126.121
 2. User data:
-     #!/bin/bash
-    yum update -y
-    yum install -y httpd
+   
+  🟂 #!/bin/bash
+   yum update -y
+   yum install -y httpd
    systemctl enable httpd
    systemctl start httpd
    HOSTNAME=$(hostname)
@@ -70,8 +71,8 @@
    <p>Private IP: ${PRIVATE_IP}</p>
    </body></html>
    EOF 
-3. Launch and access via browser
-4. Following are the screenshoots:-
+4. Launch and access via browser
+5. Following are the screenshoots:-
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/cdef9fed-8299-4a09-b2d1-1c08f0aa4ba0" />
 
@@ -79,6 +80,40 @@
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4f950389-b81b-47e2-ab11-3114b03ebd75" />
 
-
+🧩Task 3- Create, attach, and snapshot an EBS data volume
+ -
+ 1. Creared Volume: 8 GB, same zone from task 1
+ 2. Attach the volume to instance /dev/xvdbf
+ 3. sudo mkfs -t ext4 /dev/xvdbf
+    sudo mkdir /data
+    sudo mount /dev/xvdbf /data
+    echo "Hare krishna" | sudo tee /data/test.txt
+    sudo blkid /dev/xvdbf
+ 4. Add to /etc/fstab using UUID
+ 5. Created snapshoot from volume
+ 6. Restored the snapshoot to new volume and attach and verify
+ 7.    sudo mkdir /mnt/restored
+       sudo mount /dev/xvdbf /mnt/restored
+       cat /mnt/restored/test.txt
+ 8. vol-089d4cc8a1949824c
+    snap-0e600a510abb9fc59
+ 9. Following are the screenshoots:-
     
+ <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/6a9f13be-f55f-4d1b-8606-aadbefc77942" />
+ 
+ <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/aa7876b4-71f6-4cc6-a66f-990919772ff5" />
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7836de75-c508-4e99-9d92-beb1a466cbe8" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ce4e8bdd-f3dc-460c-b532-f9aab562af09" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/cfec7659-6190-4f8d-85c0-e2d590325d8d" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/adcd80eb-93db-41b9-9996-6f7a29b50fe0" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/0124c4e1-1bab-4990-baa2-715bcc61484f" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/5d389d44-ad7e-409a-a6c7-b4ad28e0a40b" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/90253b1a-450d-4cb9-8357-ce0438877196" />
+ 
