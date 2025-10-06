@@ -30,11 +30,13 @@
 6. Tested using CLI
    -
    [root@ip-10-0-6-19 ~]# aws s3 cp sample.txt s3://intern-assignments-mansi/uploads/sample.txt
-   upload: ./sample.txt to s3://intern-assignments-mansi/uploads/sample.txt
+   upload: ./sample.txt to s3://intern-assignments-mansi/uploads/sample.txt (Access granted)
 
    [root@ip-10-0-6-19 ~]# aws s3 rm s3://intern-assignments-yourname/uploads/sample.tx
-   delete failed: s3://intern-assignments-yourname/uploads/sample.tx An error occurred (NoSuchBucket) when calling the DeleteObject operation: The specified bucket    does not exist
-7. Following are the screenshoots:-🎴
+    delete failed: s3://intern-assignments-yourname/uploads/sample.tx An error occurred (NoSuchBucket) when calling the DeleteObject operation: The specified        bucket does not exist (Access Denied)
+7. Short note:-   Least privilege is beacause the policy granted only Putobject and Getobjects on the resources (uploads/)and other denies Deleteobject and non-Https access. No S3 actions and buckets can be performed or allow , wichnis the principal  of the least privilege. 
+   
+9. Following are the screenshoots:-🎴
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/55e47dc1-6d68-4891-84c4-cd4e74b8408b" />
 
