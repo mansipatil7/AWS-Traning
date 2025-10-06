@@ -141,3 +141,56 @@ snapshot too)
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a1ae0765-7994-4ff2-9155-00e9a9ea8e37" />
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7e525bcd-0c65-4242-aa06-836a3ea35404" />
+
+🧩Task 5- Deploy Web App with ALB and Auto Scaling (Launch Template)
+-
+1. Created Target Group: tg-web-task5
+2. Created Application Load balancer : lb-web-task5
+3. Created Launch Tamplated : lt-intern-web
+4. user data-
+   #!/bin/bash
+   yum update -y
+   yum install -y httpd
+   systemctl enable httpd
+   systemctl start httpd
+   HOSTNAME=$(hostname)
+   PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
+   cat > /var/www/html/index.html <<EOF
+   <html>
+   <body>
+      <h1>Instance hostname: ${HOSTNAME}</h1>
+    <p>Private IP: ${PRIVATE_IP}</p>
+    </body>
+   </html>
+   EOF
+   chown -R apache:apache /var/www/html
+5. Created Auto Sacling Group
+6. Validate and tested the sites and insrances
+7. DNS- 
+   http://lb-web-task5-690576389.ap-southeast-1.elb.amazonaws.com/
+8. Following are the screenshoots:-
+
+   
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ce0271f1-bf2d-4cfe-aca0-864cc8fa469a" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/0d82a9b7-c188-4c80-bc03-bc50e1dfd769" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/695caea1-132c-4440-abee-3b3b49437e5f" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/3ef56ea4-9ac1-4ede-99e4-d8dee421e986" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/554e55eb-005c-4b1a-9246-a5822a3a2258" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e85e2dcf-2890-4fe2-9f74-f88f057d1308" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/751b5b9e-8f46-4c43-8062-56153bb09ab4" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/8216b123-2107-47b7-8651-addd0349859a" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4d7872c6-c222-4aa0-a000-576c1ceb10ea" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a3a2e85d-2875-45ac-89ec-2570e3f6ddfb" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/d3cb7397-96e4-4ba2-beb8-01d3adff6f7e" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/36673b7b-2ee1-4902-b949-9d7f962c1309" />
