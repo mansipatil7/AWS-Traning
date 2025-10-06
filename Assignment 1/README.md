@@ -1,4 +1,4 @@
-🎯AWS PRactical Assessment -Week 1
+🎯AWS PRactical Assessment -Week 1♟️
 -
 🧩Task 1- Create a least-privilege policy for S3 write and prove it works
 -
@@ -34,7 +34,7 @@
 
    [root@ip-10-0-6-19 ~]# aws s3 rm s3://intern-assignments-yourname/uploads/sample.tx
    delete failed: s3://intern-assignments-yourname/uploads/sample.tx An error occurred (NoSuchBucket) when calling the DeleteObject operation: The specified bucket    does not exist
-7. Following are the screenshoots:-
+7. Following are the screenshoots:-🎴
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/55e47dc1-6d68-4891-84c4-cd4e74b8408b" />
 
@@ -50,7 +50,7 @@
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/b0e25ff6-2a91-4b3b-9d05-e346105fbe33" />
 
-🧩Task 2- Launch an EC2 and serve a simple web page
+🧩Task 2- Launch an EC2 and serve a simple web page♟️
 -
 1. EC2 >Launch instance
    ❖ Name : webserver-1
@@ -72,7 +72,7 @@
    </body></html>
    EOF 
 4. Launch and access via browser
-5. Following are the screenshoots:-
+5. Following are the screenshoots:-🎴
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/cdef9fed-8299-4a09-b2d1-1c08f0aa4ba0" />
 
@@ -80,7 +80,7 @@
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4f950389-b81b-47e2-ab11-3114b03ebd75" />
 
-🧩Task 3- Create, attach, and snapshot an EBS data volume
+🧩Task 3- Create, attach, and snapshot an EBS data volume♟️
  -
  1. Creared Volume: 8 GB, same zone from task 1
  2. Attach the volume to instance /dev/xvdbf
@@ -97,7 +97,7 @@
        , cat /mnt/restored/test.txt
  8. vol-089d4cc8a1949824c
     & snap-0e600a510abb9fc59
- 9. Following are the screenshoots:-
+ 9. Following are the screenshoots:-🎴
     
  <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/6a9f13be-f55f-4d1b-8606-aadbefc77942" />
  
@@ -119,7 +119,7 @@
  
 
 🧩Task 4- Create a custom AMI and launch a new instance from it (test EBS 
-snapshot too)
+snapshot too)♟️
 -
 1. Created AMI from Task2 instance
 2. Launch the new Instanve from AMI
@@ -128,7 +128,7 @@ snapshot too)
 5. ami- 0597936867a2c31c3
 6. instance id- 0c787133de99461ca
 7. public IP: 18.143.76.203
-8. Following are the screenshoots:-
+8. Following are the screenshoots:-🎴
 
  <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e36520c2-d196-47cb-b90c-4d0bc631cf09" />
 
@@ -142,7 +142,7 @@ snapshot too)
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7e525bcd-0c65-4242-aa06-836a3ea35404" />
 
-🧩Task 5- Deploy Web App with ALB and Auto Scaling (Launch Template)
+🧩Task 5- Deploy Web App with ALB and Auto Scaling (Launch Template)♟️
 -
 1. Created Target Group: tg-web-task5
 2. Created Application Load balancer : lb-web-task5
@@ -168,7 +168,7 @@ snapshot too)
 6. Validate and tested the sites and insrances
 7. DNS- 
    http://lb-web-task5-690576389.ap-southeast-1.elb.amazonaws.com/
-8. Following are the screenshoots:-
+8. Following are the screenshoots:-🎴
 
    
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ce0271f1-bf2d-4cfe-aca0-864cc8fa469a" />
