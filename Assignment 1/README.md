@@ -85,18 +85,18 @@
  1. Creared Volume: 8 GB, same zone from task 1
  2. Attach the volume to instance /dev/xvdbf
  3. sudo mkfs -t ext4 /dev/xvdbf
-    sudo mkdir /data
-    sudo mount /dev/xvdbf /data
-    echo "Hare krishna" | sudo tee /data/test.txt
-    sudo blkid /dev/xvdbf
+   , sudo mkdir /data
+    ,sudo mount /dev/xvdbf /data
+    ,echo "Hare krishna" | sudo tee /data/test.txt
+    ,sudo blkid /dev/xvdbf
  4. Add to /etc/fstab using UUID
  5. Created snapshoot from volume
  6. Restored the snapshoot to new volume and attach and verify
  7.    sudo mkdir /mnt/restored
-       sudo mount /dev/xvdbf /mnt/restored
-       cat /mnt/restored/test.txt
+      , sudo mount /dev/xvdbf /mnt/restored
+       , cat /mnt/restored/test.txt
  8. vol-089d4cc8a1949824c
-    snap-0e600a510abb9fc59
+    & snap-0e600a510abb9fc59
  9. Following are the screenshoots:-
     
  <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/6a9f13be-f55f-4d1b-8606-aadbefc77942" />
@@ -117,3 +117,27 @@
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/90253b1a-450d-4cb9-8357-ce0438877196" />
  
+
+🧩Task 4- Create a custom AMI and launch a new instance from it (test EBS 
+snapshot too)
+-
+1. Created AMI from Task2 instance
+2. Launch the new Instanve from AMI
+3. Verify the browser the site is working proprly
+4. Attach volume from snapshoot and verify test.txt
+5. ami- 0597936867a2c31c3
+6. instance id- 0c787133de99461ca
+7. public IP: 18.143.76.203
+8. Following are the screenshoots:-
+
+ <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e36520c2-d196-47cb-b90c-4d0bc631cf09" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/0c89f42b-68a2-4dcb-a1f8-3f74589e708f" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/30624f31-081c-4e69-8021-c7e45ba3e762" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ad80d6cc-7571-4896-bc43-b1c47e37b4e3" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a1ae0765-7994-4ff2-9155-00e9a9ea8e37" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7e525bcd-0c65-4242-aa06-836a3ea35404" />
