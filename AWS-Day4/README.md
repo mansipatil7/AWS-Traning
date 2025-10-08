@@ -44,7 +44,8 @@ Here we terminate the instance for Auto scaling work
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/2b872695-91d5-482b-8de1-d3692a167358" />
 
 
-🚀Here we comple the day 4 task sucessfully🚀
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/686753eb-7bd4-46e9-8e01-13176cd84aea" />
 After terminate the instance the new instnace take its place and the website runs
 
+
+🚀Here we comple the day 4 task sucessfully🚀
