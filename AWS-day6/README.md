@@ -111,6 +111,34 @@ A minor DB patch is available for your engine version
 ### Task :-
 Your security team asks for IAM-based DB authentication. 
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/428baf98-c3de-4ee3-a5c7-dbf9da9cb735" />
 
 
+#### Applyied the IAM base DB authentication
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/aafc551c-8c9c-4c7d-9dcb-676cbcf72d28" />
+
+#### Created the policy for the IAM user
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/0e8366f9-26c0-47bb-8f18-0c1968a9c3bb" />
+
+#### Creted the IAM user and Attach the policy 
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/b8e875b5-0c43-4f93-b95d-83a4c8ddf822" />
+
+#### Here i have generate the token and acces this terminal where we can see the IAM user ARN in the response. After gerate Authentivtion token we can connect RDS. 
+#### 🧠 Goal: Implement least-privilege and secure access. 
+
+# 7  Export/Import via S3 
+### Task :-
+You need to migrate old data from S3 into RDS
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/f12e27e4-6b16-4ed6-91b2-42b9fe72274e" />
+
+#### Here i have created the S3 Bucket for RDS snapshoot
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/90a287e3-91ee-4e55-8b19-596124592982" />
+
+#### Exported snapshoot to Amazon S3
