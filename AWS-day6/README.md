@@ -44,4 +44,28 @@ Your RDS instance accidentally had data deleted.
 #### Restore from snapshot or Point-In-Time Recovery to recover lost data. 
 #### 🧠 Goal: Learn data protection and restore process. 
  
- 
+# 3 Read Replica for Load Sharing
+### Task :-
+Create a Read Replica of your primary RDS
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/95a37452-7c25-4483-bc9f-f9a575ad7784" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4ab0e77d-e9cd-4998-a03c-5313e35264d9" />
+
+#### Here i have created the Read Replica 
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e719ce32-8ee5-458f-a3c8-f4e3cea87407" />
+
+#### Replica is creating 
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/1ecafe26-9432-4cdb-bdb0-93611a2b349f" />
+
+#### After the replica is craeted here we are **fail** to write the data, because its read replica
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/de601bf5-db68-4f8d-a4aa-43ff6f8d04bb" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/b197764a-4f68-4456-9f78-4c103735df6b" />
+
+#### After the fail, I Promote the replica to a standalone instance to simulate failover. 
+#### 🧠 Goal: Understand scaling reads and replication concepts.
+
