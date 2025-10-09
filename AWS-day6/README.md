@@ -69,3 +69,48 @@ Create a Read Replica of your primary RDS
 #### After the fail, I Promote the replica to a standalone instance to simulate failover. 
 #### 🧠 Goal: Understand scaling reads and replication concepts.
 
+# 4 Multi-AZ & Failover
+### Task :-
+ A production DB should stay available even if one AZ fails.
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a400c54e-8d31-484f-ab8b-90c2c5692ecf" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/06561864-77ec-46f4-b226-0e38a40a5afe" />
+
+#### Here I Enable Multi-AZ deployment and the instance is modifying
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/5f17fdde-f358-4d1f-ba38-1e2dc461a2a0" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/95861cb4-374d-4374-9806-58dcf1f6eb10" />
+
+####  Here i have Reboot the instance with “failover” option to see automatic switch. 
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/d7af0994-4bf1-4828-b7bc-72c2badc1622" />
+
+
+#### Here the instance has switch automatically 
+#### 🧠 Goal: Observe HA and fault tolerance behavio
+
+# 5 Maintenance & Updates
+### Task :-
+A minor DB patch is available for your engine version
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a139f303-2cf3-45c9-846b-872732507b61" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/fdd4c116-01f4-4693-a4f2-0cdf11df0a73" />
+
+#### Here i have modify the Manintenance window and set the time and modify it
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/fbe1be29-5287-4766-99df-255c63cf567b" />
+
+#### Sucessfuly Apply Minor Version Upadte 
+#### 🧠 Goal: Practice version management safely.
+
+
+# 6 Security Hardening
+### Task :-
+Your security team asks for IAM-based DB authentication. 
+
+
+
+
