@@ -186,9 +186,52 @@ rtt min/avg/max/mdev = 1.150/1.192/1.230/0.030 ms
 
 
 # 5 — Monitoring & Auditing (CloudWatch + CloudTrail)
-## Task (basic): Enable CloudTrail and create a CloudWatch Log Group for the private app. Make a metric filter for ERROR lines and create an SNS email alarm. Also, create a tiny CloudWatch dashboard
+## Task (basic): Enable Cloud watch and create an SNS email alarm. Also, create a tiny CloudWatch dashboard
+
+#### Here i have created VPC
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/16483275-10bc-422f-98ff-570c8e4459bf" />
+
+#### Launch the Instance
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/9180184d-e358-447e-9ae7-093439092d6b" />
+
+#### Create the SNS Topic and Subscribe Through email
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/3ba2a62f-0219-42d4-b8f8-1e224d6f3c9b" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/f30b3f06-55be-455d-b480-9c55a3f1cb1d" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/9c54a01f-7bb2-4c48-873d-8ea15f50fa8b" />
 
 
+#### Created Cloudwatch Matrics and set the CPU Utilization
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c9c2c2b7-b62f-4884-ba5b-0ded36284d20" />
 
 
+#### Create the Dashboard
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/945ada75-b46c-46be-a15e-1214cc3e6b86" />
+
+#### Create the cloud watch alarm using SNS (email)
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4d6f1f30-7489-4553-8cd4-cf4e8a4d759b" />
+
+
+#### On instance , for checking the alaram trigger the CPU and given load ,where i have set 50> 
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/43a42492-5b12-4afd-acac-ae7064a80e03" />
+
+
+#### The SNS jas sen alert notification to email
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ed510990-8860-4ce3-8b72-34f9e1bdaf1f" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/b8570e8c-9876-40d6-bf5f-aed8ac166e57" />
+
+
+#### Here i had check the CloudTrial log
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4971c393-4de9-4404-a264-e8b8f3513ac4" />
 
