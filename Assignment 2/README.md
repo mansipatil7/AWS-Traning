@@ -55,3 +55,68 @@ iPING 10.1.1.50 (10.1.1.50) 56(84) bytes of data.
 rtt min/avg/max/mdev = 1.150/1.192/1.230/0.030 ms
 ```
 
+# 2- Create IAM role, EC2 base server, create AMI & snapshot
+## Task (simple): Launch one EC2, attach an IAM role, install a small web page, create an AMI from it, and snapshot a second EBS volume
+
+1. IAM Role ARB:- arn:aws:iam::021891603196:role/Ec2-CW-S3-role
+2. EC2 Instance ID:- 0daa3b08a5238f5cf
+3. AMI ID:- 02802057a228a17d4
+4. EBS Volume:- 092d367a2a6334d4b
+5. Snapshoot ID:- 0bd575d6bc82502ef
+
+
+#### Here i have make the IAM role Ploicy
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/1b561759-1bbe-49b2-ae7b-0391e11d2dc5" />
+
+
+#### Launch the instance 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/eb09dbde-45c6-4abc-9f9b-bc63f219da11" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/cbe23a57-11c2-4e94-a701-530e01d66f56" />
+
+
+#### Here i have create the volume and attach the volume to the instance /dev/xvdf
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a5b25ac2-f4aa-4df9-9cae-ccc7fc470b4f" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4d9aa727-3162-4f44-8d74-901a403fb5d2" />
+
+#### Here i have took the screenshot 
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/cbfe7ad4-0ae2-42d0-a7fc-05be5947cbf2" />
+
+
+#### Make the volume
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/5bf318a1-ee60-4849-b241-cb2c959b5760" />
+
+
+
+#### Finally launch the AMI sucessfully
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/edf761ef-f6fe-4398-819a-f56dbd9bc0ea" />
+
+```python
+ curl http://localhost
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Hello World from Base App Server!</h1>
+    <p>Instance ID: </p>
+    <p>Availability Zone: </p>
+</body>
+</html>
+
+```
+
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/cf494259-d3a6-4ca6-93b6-7c92cf766c06" />
