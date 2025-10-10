@@ -78,7 +78,8 @@ rtt min/avg/max/mdev = 1.150/1.192/1.230/0.030 ms
 
 #### Here i have create the volume and attach the volume to the instance /dev/xvdf
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a5b25ac2-f4aa-4df9-9cae-ccc7fc470b4f" />
-
+#### Mount is there
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/cf494259-d3a6-4ca6-93b6-7c92cf766c06" />
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4d9aa727-3162-4f44-8d74-901a403fb5d2" />
 
 #### Here i have took the screenshot 
@@ -113,10 +114,81 @@ rtt min/avg/max/mdev = 1.150/1.192/1.230/0.030 ms
 
 ```
 
+# 3 — Public app: ALB + Auto Scaling Group (basic) + S3 static asset
+## Task (basic-intermediate): Serve the public app via an ALB using an Auto Scaling Group (ASG) with the AMI from Task 2. Host one static image on S3 and reference it from the web page.
+
+1. S3 bucket name: my-t3-bucket-07
+2. S3 object URL: https://my-t3-bucket-07.s3.ap-southeast-1.amazonaws.com/New+Text+Document.txt
+3. ALB DNS name: my-app-alb-435449307.ap-southeast-1.elb.amazonaws.com
+4. Target Group ARN: tg=arn:aws:elasticloadbalancing:ap-southeast-1:021891603196:targetgroup/my-app-
+5. ACG name: my-app-asg
+
+#### Crete the S3 bucket and the page is running
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/3fcd7248-7b18-4dc8-931b-a57c012dea07" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/31b96923-09ef-4cb0-a26c-66dfe58d646a" />
+
+#### created the role for EC2 and S3
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c7280f60-589c-4af6-81bb-cfe1e8ef94f6" />
+   
+
+#### Create the target group and load balancer
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/1ec3668e-890d-44f0-b811-be30ffe881e0" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/92b3ee9c-9763-458f-94ff-f41bd8efb4c5" />
+
+#### Launch the template and create the autoscaling group
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/bcd5756f-ce51-415b-8e3a-90d596d485aa" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/8009cfc8-41e2-4a70-bd1f-d9a389efa85b" />
+
+
+
+#### Instance Launched by template 
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/9b6c8b84-5616-46ae-a336-c963838b564f" />
+
+
+#### Finally my site is runing using ALB DNS
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a16017f2-4699-4c93-8723-6ebc175a27fa" />
+
+
+
+# 4 — Private app: RDS (private) + EFS + private EC2
+## Task (basic-intermediate): In VPC-B, host a private app that mounts EFS and connects to an RDS database (both private). The private app must be reachable from instances in VPC-A via peering (but not from the public internet). 
+
+1. RDS endpoint: database-1.c3882me4ccst.ap-southeast-1.rds.amazonaws.com
+2. EFS ID: fs-097f1a2c0ba917263
+3. 
+
+#### Created Subnet group
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ff0d836b-03e1-42e6-9d15-33e4afd1b197" />
+
+
+#### Created Database
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/89807d7b-b19a-427a-bd0b-ffcbe55ec0a1" />
+
+
+#### Created the EFS file
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c096fd18-e463-4f3a-9756-4c4b6dc32c52" />
+
+#### Launch one EC2 in VPC-B private subnet (use the base-app-ami) and in userdata mount EFS and connect to RDS
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/44dfc707-db17-4696-b07a-0d14c0250799" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e41f2af3-0ca6-47a6-ad51-1497d3623d5c" />
+
+
+# 5 — Monitoring & Auditing (CloudWatch + CloudTrail)
+## Task (basic): Enable CloudTrail and create a CloudWatch Log Group for the private app. Make a metric filter for ERROR lines and create an SNS email alarm. Also, create a tiny CloudWatch dashboard
 
 
 
 
 
-
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/cf494259-d3a6-4ca6-93b6-7c92cf766c06" />
