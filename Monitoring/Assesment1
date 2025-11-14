@@ -1,1 +1,17 @@
+# Task1
+### Set up Prometheus to monitor system metrics using Node Exporter via Docker Compose.
+#### 1. Files Description
+### docker-compose.yml
+Defines two services:
+
+· Prometheus: Monitoring server on port 9090
+· Node Exporter: System metrics collector on port 9100
+
+### prometheus.yml
+Configuration file for Prometheus with:
+
+· Global scrape interval: 15 seconds
+· Two scrape jobs:
+  · prometheus: Monitors itself on localhost:9090
+  · node_exporter: Collects system metrics from node_exporter:9100
 
