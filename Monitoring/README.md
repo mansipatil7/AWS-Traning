@@ -37,27 +37,59 @@ prometheus      /bin/prometheus --config.f ...   Up      0.0.0.0:9090->9090/tcp
 
 #### 5.Docker-compose runnig 
 
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/834f1cb6-2a55-4509-90ae-051f3ca6fc6e" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/99384043-6899-4810-a073-716f4d76405a" />
 
-#### 6. server status is up 
+#### 6. localhost:9090/query and metrics
 
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/260c27a9-2118-478d-8675-db586da9b5da" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/fc32e70e-9ae2-403e-b650-bb02e6589a85" />
 
-#### 7. curl to 9091 and ist working on dashboard
-
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/b6d2e6ba-f8d9-45ef-bdfe-54a6c0199913" />
-
-#### 8. Docker containers are running
-
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e812c873-eca5-406c-ae56-a00d88faa932" />
-
-
-#### 9. Instance image
-
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ed6416ed-8686-46fc-a4a6-b15dfe16eabe" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/285ab99e-1005-42ab-96fb-8eec43da5702" />
 
 
 
+#### 7. 9091 working on dashboard
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/1071a9df-47c0-4c47-88f9-ab2cca4013b2" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/72c147ae-25de-44b4-b512-e720c53fe1f2" />
+#### 8. docker-compose.yml
+
+```bash
+version: '3.8'
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    ports:
+      - "9100:9100"
+
+```
+
+#### 9. prometheus.yml
+
+```bash
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: "node-exporter"
+    static_configs:
+      - targets: ["node-exporter:9100"]
+
+```
 # Task 2
 ### Set up a complete observability stack with Loki for log aggregation, Prometheus for metrics, and Grafana for visualization using Docker Compose.
 #### 1. docker-compose.yml
