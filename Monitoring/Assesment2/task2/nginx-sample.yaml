@@ -20,4 +20,5 @@ spec:
         image: busybox
         command: ["/bin/sh","-c"]
         args:
+
           - while true; do echo "$(date) Hello from logs"; sleep 5; done
