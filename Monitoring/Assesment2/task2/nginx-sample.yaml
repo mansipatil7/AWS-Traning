@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: logging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+      - name: loggen
+        image: busybox
+        command: ["/bin/sh","-c"]
+        args:
+          - while true; do echo "$(date) Hello from logs"; sleep 5; done
