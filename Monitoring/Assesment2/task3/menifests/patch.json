@@ -1,9 +1,0 @@
-{
-  "spec": {
-    "serviceMonitorSelectorNilUsesHelmValues": false,
-    "serviceMonitorSelector": {},
-    "podMonitorSelector": {},
-    "probeSelector": {},
-    "scrapeInterval": "30s"
-  }
-}
