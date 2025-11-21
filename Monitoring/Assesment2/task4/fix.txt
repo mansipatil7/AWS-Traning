@@ -1,0 +1,14 @@
+### Fix 1 — Base Image Updated
+Changed from: python:3.9-slim  
+To: python:3.9-alpine  
+Reason: Alpine has fewer packages → fewer vulnerabilities.
+
+### Fix 2 — Added non-root user
+Security improvement: container now runs as unprivileged user.
+
+### Fix 3 — Removed cache layers
+Reduces attack surface.
+
+Result:
+- Critical vulnerabilities reduced
+- High vulnerabilities reduced
