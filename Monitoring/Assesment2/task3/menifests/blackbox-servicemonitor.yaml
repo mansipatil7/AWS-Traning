@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: blackbox-monitor
+  namespace: monitoring
+spec:
+  selector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values:
+          - blackbox-exporter
+  endpoints:
+    - port: http
+      interval: 30s
+      path: /probe
+      params:
+        module: [http_2xx]
+        target:
+          - https://google.com
+          - https://github.com

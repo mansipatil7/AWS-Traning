@@ -1,0 +1,1 @@
+print("Hello, from mansi secure docker app!")
